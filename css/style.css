@@ -328,11 +328,76 @@ button:hover {
     padding-right: 20px;
 }
 
-/* =================== CONTATO =================== */
-.contato {
-    padding: 20px 20px 80px 20px; /* topo reduzido */
-    background-color: var(--cor-clara);
+/* ========== FORMULÁRIO COM DESIGN PROFISSIONAL ========== */
+#formulario {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formulario input,
+#formulario textarea {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+#formulario input:focus,
+#formulario textarea:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 2px rgba(69, 123, 157, 0.2);
+    outline: none;
+}
+
+#formulario textarea {
+    min-height: 120px;
+}
+
+#formulario button {
+    padding: 15px;
+    background-color: var(--cor-destaque);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#formulario button:hover {
+    background-color: var(--cor-principal);
+    transform: scale(1.02);
+}
+
+#sucesso {
     text-align: center;
+    color: green;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 600px) {
+    #formulario {
+        padding: 20px;
+        margin: 30px 15px 0 15px;
+    }
+}
+
+.contato {
+    padding: 80px 20px;
+    background-color: var(--cor-clara);
 }
 
 .container-contato {
@@ -341,44 +406,21 @@ button:hover {
     flex-wrap: wrap;
     max-width: 800px;
     margin: auto;
-    padding: 40px 20px;
-    background: white;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    padding: 0;
 }
 
 .info-contato {
-    text-align: left;
-    padding: 20px;
-    color: var(--cor-destaque);
-    flex: 1;
-}
-
-.info-contato h2 {
+    text-align: center;
+    padding: 30px;
     color: var(--cor-principal);
-    font-size: 2rem;
-    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 600px;
 }
 
-.info-contato p {
-    color: #444;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
 
-.contato-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: var(--cor-destaque);
-}
-
-.contato-item p {
-    margin: 0;
-}
 
 
 /* =================== RODAPÉ =================== */

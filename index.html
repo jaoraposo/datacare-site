@@ -165,43 +165,24 @@
     </section>
 
 <!-- ==== Seção de Contato ==== -->
+
 <section class="contato" id="contato">
-    <div class="container-contato">
-      <div class="info-contato">
-        <h2>Fale Conosco</h2>
-        <p>Estamos prontos para transformar a gestão da saúde com tecnologia de ponta.</p>
-  
-        <!-- Botão para exibir o reCAPTCHA -->
-        <button id="ver-contato-btn">Ver Contato</button>
-  
-        <!-- Container do reCAPTCHA -->
-        <div id="captcha-container" style="display: none; margin-top: 15px;">
-          <div class="g-recaptcha"
-               data-sitekey="6Le3-AIrAAAAAE2iIAQ_BKXl41xHfS1R93BiQx1c"
-               data-callback="mostrarContato">
-          </div>
-        </div>
-  
-        <!-- Dados de contato (escondido até o reCAPTCHA ser resolvido) -->
-        <div id="dados-contato" style="display: none; margin-top: 15px;">
-          <div class="contato-item">
-            <i class="fas fa-phone"></i>
-            <p>Telefone: (11) 91687-2432</p>
-          </div>
-          <div class="contato-item">
-            <i class="fas fa-envelope"></i>
-            <p>E-mail: contato@bedatacare.com.br</p>
-          </div>
-        </div>
-      </div>
+  <div class="container-contato">
+    <div class="info-contato">
+      <h2>Fale Conosco</h2>
+      <p>Estamos prontos para transformar a gestão da saúde com tecnologia de ponta.</p>
+
+      <form id="formulario">
+        <input type="text" id="nome" placeholder="Nome completo" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="sucesso" style="display: none;">Enviado com sucesso!</p>
     </div>
-  </section>
-  
-  <!-- Script do reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>  
-  
-    </div>
-  </section>
+  </div>
+</section>
+      
   
 
 <footer class="rodape">
@@ -223,6 +204,13 @@
     </div>
   </footer>
   
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- Seu JS -->
+<script src="js/formulario.js"></script>
+
  </body>
  <script src="js/script.js"></script>
 </html>
