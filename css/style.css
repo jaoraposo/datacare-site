@@ -297,13 +297,12 @@ button:hover {
 
 /* =================== LGPD =================== */
 .info-lgpd {
-    max-width: 1200px;     /* mesmo limite dos cards */
-    margin: 30px auto 0 auto;
-    padding-left: 85px;    /* empurra só um pouco o conteúdo para a direita */
+    max-width: 1200px;
+    margin: 30px auto 10px auto; /* reduz espaço abaixo da LGPD */
+    padding-left: 85px;
     padding-right: 40px;
     text-align: left;
 }
-
 
 
 .info-lgpd h3 {
@@ -335,7 +334,7 @@ button:hover {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     max-width: 600px;
-    margin: 40px auto 0 auto;
+    margin: 10px auto 40px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -563,6 +562,18 @@ button:hover {
     }
 }
 
-
+/* --- AJUSTE ENTRE LGPD E FORMULÁRIO --- */
+#tecnologias-utilizadas {
+    padding-bottom: 0px !important; /* Remove o espaço extra da seção anterior */
+  }
+  
+  .info-lgpd {
+    margin-bottom: 0px !important; /* Remove espaço abaixo do texto LGPD */
+  }
+  
+  .contato {
+    margin-top: -40px !important; /* Faz o formulário subir e colar na LGPD */
+  }
+  
 
 
