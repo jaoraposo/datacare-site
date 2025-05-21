@@ -494,51 +494,41 @@ button:hover {
 
 
 /* =================== RESPONSIVIDADE =================== */
-@media (max-width: 768px) {
-    .logo h1 {
-        font-size: 1.5rem;
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .Menu a {
-        font-size: 1rem;
-        margin: 0 8px;
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #formulario {
+        padding: 20px;
+        margin: 30px 15px;
+        width: 90%;
+    }
+
+    .info-contato {
+        padding: 20px;
+        box-shadow: none;
+        width: 100%;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     header p {
         font-size: 1rem;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-
-    .info-lgpd,
-    .nossas_tecnologias,
-    .card-func {
-        margin: 20px auto;
-        padding: 20px;
-    }
-
-    .container-contato {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .info-contato h2 {
-        font-size: 1.5rem;
-    }
-
-    .info-contato p {
-        font-size: 1rem;
-    }
-
-    .contato-item {
-        font-size: 0.95rem;
     }
 
     .rodape {
@@ -552,6 +542,26 @@ button:hover {
     }
 }
 
+
+.Menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .Menu {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .Menu a {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+}
 
 
 
