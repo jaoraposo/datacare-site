@@ -1,0 +1,516 @@
+
+/* Importando fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap');
+
+/* DEFININDO VARIAVEIs */
+:root {
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+
+    --cor-principal: #1D3557;
+    --cor-destaque: #457B9D;
+    --cor-fundo: #ffffff;
+    --cor-principal-borda: #1d355794;
+    --cor-clara: #f9f9f9;
+    --cor-media: #b8c0c7;
+    --cor-escura: #3c4852;
+}
+
+/* RESTANDO CONFIG PADRAO DE NAVEGADOR*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-escura);
+}
+
+
+/* =================== BARRA DE NAVEGACAO =================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: -20px; 
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+    font-weight: bold;
+    margin: 0;
+    
+}
+
+.Menu {
+    display: flex;
+}
+
+.Menu a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.Menu a:hover {
+    color: var(--cor-destaque);
+}
+
+
+
+/* =================== SESSAO INICIAL COM VIDEO DE FUNDO=================== */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* VIDEO DE FUNDO */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* CAMADA ESCURA PALEITURA*/
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* TEXTO INICIAL */
+.inicial_datacare {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* BOTAO SAIBA MAIS*/
+button {
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: var(--cor-principal);
+    transform: scale(1.05);
+}
+
+/* =================== SESSAO SOBRE =================== */
+#sobre-datacare {
+    padding: 80px 20px;
+    text-align: center;
+    background: var(--cor-clara);
+}
+
+#sobre-datacare h1 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+}
+
+#sobre-datacare p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* =================== NOSSOS SERVICOS =================== */
+
+#tecnologias-utilizadas h1 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 50px;
+}
+
+
+.cards-funcionalidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-func {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-func:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-func i {
+    font-size: 2.5rem;
+    color: var(--cor-destaque);
+    margin-bottom: 15px;
+}
+
+.card-func h3 {
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.card-func p {
+    font-size: 1rem;
+    color: var(--cor-escura);
+}
+
+#como-trabalhamos {
+    padding: px 20px;
+    text-align: center;
+}
+
+#como-trabalhamos h1 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    
+}
+
+#como-trabalhamos img {
+    width: 100%;
+    max-width: 1900px;
+    margin-top: 20px;
+}
+
+/* =================== TECNOLOGIAS UTILIZADAS =================== */
+#tecnologias-utilizadas {
+    padding: 80px 40px;
+    text-align: center;
+    background: var(--cor-clara);
+}
+
+/* Container que envolve os .nossas_tecnologias */
+.carrosel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Cada card de tecnologia */
+.nossas_tecnologias {
+    flex: 1 1 45%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nossas_tecnologias:hover {
+    transform: translateY(-10px);
+}
+
+.nossas_tecnologias h3 {
+    color: var(--cor-destaque);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.nossas_tecnologias p {
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+/* =================== LGPD =================== */
+.info-lgpd {
+    max-width: 1200px;     /* mesmo limite dos cards */
+    margin: 30px auto 0 auto;
+    padding-left: 85px;    /* empurra só um pouco o conteúdo para a direita */
+    padding-right: 40px;
+    text-align: left;
+}
+
+
+
+.info-lgpd h3 {
+    color: var(--cor-principal);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info-lgpd p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.alinhado-com-cards {
+    max-width: 1200px;  /* ou o mesmo valor usado no .carrosel */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* =================== CONTATO =================== */
+.contato {
+    padding: 20px 20px 80px 20px; /* topo reduzido */
+    background-color: var(--cor-clara);
+    text-align: center;
+}
+
+.container-contato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+.info-contato {
+    text-align: left;
+    padding: 20px;
+    color: var(--cor-destaque);
+    flex: 1;
+}
+
+.info-contato h2 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.info-contato p {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--cor-destaque);
+}
+
+.contato-item p {
+    margin: 0;
+}
+
+
+/* =================== RODAPÉ =================== */
+.rodape {
+    background-color: var(--cor-clara);
+    padding: 20px 30px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    color: #555;
+}
+
+.rodape-info p {
+    margin: 0;
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 300px;
+    background-color: #fefefe;
+    color: #333;
+    text-align: left;
+    padding: 15px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    margin-left: -5px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #fefefe transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.creditos a {
+    color: #888;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.creditos a:hover {
+    color: var(--cor-principal);
+}
+
+
+/* =================== RESPONSIVIDADE =================== */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .Menu a {
+        font-size: 1rem;
+        margin: 0 8px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .info-lgpd,
+    .nossas_tecnologias,
+    .card-func {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .container-contato {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-contato h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-contato p {
+        font-size: 1rem;
+    }
+
+    .contato-item {
+        font-size: 0.95rem;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .creditos {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
